@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ui.Maincontroller">
+    <top>
+        <MenuBar>
+            <Menu text="文件">
+                <MenuItem text="退出" onAction="#handleExit"/>
+            </Menu>
+            <Menu text="帮助">
+                <MenuItem text="关于"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TabPane fx:id="tabPane">
+            <Tab text="商品管理">
+                <fx:include fx:id="productTab" source="Productview.fxml"/>
+            </Tab>
+            <Tab text="采购管理">
+                <fx:include fx:id="purchaseTab" source="Purchaseview.fxml"/>
+            </Tab>
+            <Tab text="销售管理">
+                <fx:include fx:id="saleTab" source="Saleview.fxml"/>
+            </Tab>
+        </TabPane>
+    </center>
+
+    <bottom>
+        <!-- 使用 HBox 替代 StatusBar -->
+        <HBox styleClass="status-bar" alignment="CENTER_LEFT" spacing="10">
+            <Label fx:id="statusLabel" text="就绪"/>
+        </HBox>
+    </bottom>
+</BorderPane>

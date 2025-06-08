@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ui.Salecontroller"
+      spacing="10" styleClass="content-pane">
+
+    <HBox spacing="10">
+        <TextField fx:id="searchField" promptText="搜索销售记录..." styleClass="search-field"/>
+        <Button fx:id="addButton" text="添加" styleClass="action-button"/>
+        <Button fx:id="editButton" text="编辑" styleClass="action-button"/>
+        <Button fx:id="deleteButton" text="删除" styleClass="action-button"/>
+        <Button fx:id="refreshButton" text="刷新" styleClass="action-button"/>
+    </HBox>
+
+    <TableView fx:id="saleTable" styleClass="data-table">
+        <columns>
+            <TableColumn fx:id="orderIdColumn" text="订单号" prefWidth="120"/>
+            <TableColumn fx:id="customerColumn" text="客户" prefWidth="150"/>
+            <TableColumn fx:id="sellerColumn" text="销售人" prefWidth="100"/>
+            <TableColumn fx:id="totalAmountColumn" text="总金额" prefWidth="100"/>
+            <TableColumn fx:id="saleTimeColumn" text="销售时间" prefWidth="150"/>
+        </columns>
+    </TableView>
+</VBox>
